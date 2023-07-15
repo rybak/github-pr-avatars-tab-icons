@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         GitHub: PR author avatar as tab icon
 // @namespace    https://github.com/rybak
-// @version      3
+// @version      4
 // @description  Sets GitHub PR tab icon (favicon) to author's avatar
 // @author       Andrei Rybak
 // @homepageURL  https://github.com/rybak/github-pr-avatars-tab-icons
 // @license      MIT
 // @match        https://github.com/*/pull/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
+// @icon         https://github.githubassets.com/favicons/favicon-dark.png
 // @grant        none
 // ==/UserScript==
 

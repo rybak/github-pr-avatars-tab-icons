@@ -1,8 +1,12 @@
+### Description
+
 Changes GitHub tab icons (favicon) of pull request pages to author's avatar.
 Note that this userscript sometimes overrides the dynamic display of build
 status in the tab icon.
 
 [![Demonstration of the userscript on two pull requests with different authors][Screenshot]][GreasyForkInstall]
+
+### See also
 
 Source code is available on [GitHub][GitHubRepo], pull requests are welcome.
 

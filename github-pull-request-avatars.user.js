@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GitHub: PR author avatar as tab icon
 // @namespace    https://github.com/rybak
-// @version      1
+// @version      2
 // @description  Sets GitHub PR tab icon (favicon) to author's avatar
 // @author       Andrei Rybak
 // @homepageURL  https://github.com/rybak/github-pr-avatars-tab-icons
@@ -47,16 +47,8 @@
 		console.error(LOG_PREFIX, ...toLog);
 	}
 
-	function warn(...toLog) {
-		console.warn(LOG_PREFIX, ...toLog);
-	}
-
 	function log(...toLog) {
 		console.log(LOG_PREFIX, ...toLog);
-	}
-
-	function debug(...toLog) {
-		console.debug(LOG_PREFIX, ...toLog);
 	}
 
 	/*
@@ -73,7 +65,7 @@
 		 */
 		const m = document.location.pathname.match("^/(.*)/pull/(\\d+)");
 		if (!m) {
-			warn("Cannot extract owner_repo and pull_number for REST API URL from", document.location.pathname);
+			error("Cannot extract owner_repo and pull_number for REST API URL from", document.location.pathname);
 			return null;
 		}
 		return {
@@ -111,7 +103,9 @@
 			if (avatarUrl && shortcutIcon) {
 				shortcutIcon.href = avatarUrl;
 			} else {
-				warn("Cannot find the shortcut icon");
+				log("avatarUrl", avatarUrl);
+				log("shortcutIcon", shortcutIcon);
+				error("Cannot find the shortcut icon or the avatar URL");
 			}
 		} catch (e) {
 			error(`Cannot load ${url}. Got error`, e);

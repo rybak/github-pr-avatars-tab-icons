@@ -90,12 +90,12 @@
 	 * Replaces favicon with the PR authot's avatar.
 	 */
 	async function setFavicon() {
-		const url = getRestApiPullRequestUrl();
-		if (!url) {
+		const prUrl = getRestApiPullRequestUrl();
+		if (!prUrl) {
 			return;
 		}
 		try {
-			const response = await fetch(url);
+			const response = await fetch(prUrl);
 			const json = await response.json();
 			const avatarUrl = json.user.avatar_url;
 
@@ -109,7 +109,7 @@
 				error("Cannot find the shortcut icon or the avatar URL");
 			}
 		} catch (e) {
-			error(`Cannot load ${url}. Got error`, e);
+			error(`Cannot load ${prUrl}. Got error`, e);
 		}
 	}
 

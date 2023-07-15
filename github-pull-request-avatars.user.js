@@ -82,6 +82,10 @@
 		};
 	}
 
+	/*
+	 * Generates a URL for accessing the data about the pull request via GitHub's REST API.
+	 * https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28#get-a-pull-request
+	 */
 	function getRestApiPullRequestUrl() {
 		const parts = getPullRequestUrlParts();
 		if (!parts) {
@@ -90,6 +94,9 @@
 		return `https://api.github.com/repos/${parts.owner_repo}/pulls/${parts.pull_number}`;
 	}
 
+	/*
+	 * Replaces favicon with the PR authot's avatar.
+	 */
 	async function setFavicon() {
 		const url = getRestApiPullRequestUrl();
 		if (!url) {

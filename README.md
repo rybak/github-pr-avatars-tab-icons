@@ -1,9 +1,9 @@
 # GitHub: PR author avatar as tab icon
 
-[![Demonstration of the user script on two pull requests with different authors](.github/readme/github-pr-author-as-tab-icon.png)](https://github.com/rybak/github-pr-avatars-tab-icons/raw/main/github-pull-request-avatars.user.js)
+[![Demonstration of the userscript on two pull requests with different authors](.github/readme/github-pr-author-as-tab-icon.png)](https://github.com/rybak/github-pr-avatars-tab-icons/raw/main/github-pull-request-avatars.user.js)
 
-This user script GitHub tab icons (favicon) of pull request pages to author's
-avatar.  Note that the user script sometimes overrides the dynamic display of
+This userscript GitHub tab icons (favicon) of pull request pages to author's
+avatar.  Note that the userscript sometimes overrides the dynamic display of
 build status in the tab icon.
 
 The source code is distributed under the terms of the MIT Licence.  See

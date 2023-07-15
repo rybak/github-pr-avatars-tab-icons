@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GitHub: PR author avatar as tab icon
 // @namespace    https://github.com/rybak
-// @version      2
+// @version      3
 // @description  Sets GitHub PR tab icon (favicon) to author's avatar
 // @author       Andrei Rybak
 // @homepageURL  https://github.com/rybak/github-pr-avatars-tab-icons
@@ -101,6 +101,7 @@
 
 			const shortcutIcon = document.querySelector('link[rel="shortcut icon"], link[rel="icon"]');
 			if (avatarUrl && shortcutIcon) {
+				log(`Changing from ${shortcutIcon.href} to ${avatarUrl}`);
 				shortcutIcon.href = avatarUrl;
 			} else {
 				log("avatarUrl", avatarUrl);

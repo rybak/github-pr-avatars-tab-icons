@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GitHub: PR author avatar as tab icon
 // @namespace    https://github.com/rybak
-// @version      4
+// @version      5
 // @description  Sets GitHub PR tab icon (favicon) to author's avatar
 // @author       Andrei Rybak
 // @homepageURL  https://github.com/rybak/github-pr-avatars-tab-icons
@@ -98,16 +98,20 @@
 			const response = await fetch(prUrl);
 			const json = await response.json();
 			const avatarUrl = json.user.avatar_url;
-
-			const shortcutIcon = document.querySelector('link[rel="shortcut icon"], link[rel="icon"]');
-			if (avatarUrl && shortcutIcon) {
-				log(`Changing from ${shortcutIcon.href} to ${avatarUrl}`);
-				shortcutIcon.href = avatarUrl;
-			} else {
-				log("avatarUrl", avatarUrl);
-				log("shortcutIcon", shortcutIcon);
-				error("Cannot find the shortcut icon or the avatar URL");
+			if (!avatarUrl) {
+				error("Cannot find the avatar URL", json);
+				return;
 			}
+			const faviconNodes = document.querySelectorAll('link[rel="icon"]');
+			if (!faviconNodes || faviconNodes.length == 0) {
+				error("Cannot find favicon elements.");
+				return;
+			}
+			log("New URL", avatarUrl);
+			faviconNodes.forEach(node => {
+				log("Replacing old URL =", node.href);
+				node.href = avatarUrl;
+			});
 		} catch (e) {
 			error(`Cannot load ${prUrl}. Got error`, e);
 		}

@@ -18,12 +18,9 @@ The source code is distributed under the terms of the MIT Licence.  See
    - More options are listed on <https://greasyfork.org/> (section "Step 1:
      install a userscript manager")
 
-2. Once you have a browser extension for userscripts installed, just click on
-   the link and the extension will automagically detect it as a userscript:
+2. Once you have a browser extension for userscripts installed, click on
+   button "Install this script" on [Greasy Fork][greasyfork].
 
-   <https://github.com/rybak/github-pr-avatars-tab-icons/raw/main/github-pull-request-avatars.user.js>
-
-You can also install the script from [Greasy Fork][greasyfork].
 
 [![Badge showing number of installs from Greasy Fork](https://img.shields.io/badge/dynamic/json?style=flat&color=670000&label=Greasy%20Fork&query=total_installs&suffix=%20installs&url=https%3A%2F%2Fgreasyfork.org%2Fscripts%2F470905.json)][greasyfork]
 

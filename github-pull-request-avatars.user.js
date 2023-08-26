@@ -52,7 +52,7 @@
 	}
 
 	/*
-	 * Extracts the parts 'owner_repo' and 'pull_number" out of the current page's URL.
+	 * Extracts the parts 'owner_repo' and 'pull_number' out of the current page's URL.
 	 */
 	function getPullRequestUrlParts() {
 		/*
@@ -87,7 +87,7 @@
 	}
 
 	/*
-	 * Replaces favicon with the PR authot's avatar.
+	 * Replaces favicon with the PR author's avatar.
 	 */
 	async function setFavicon() {
 		const prUrl = getRestApiPullRequestUrl();

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GitHub: PR author avatar as tab icon
 // @namespace    https://github.com/rybak
-// @version      5
+// @version      6
 // @description  Sets GitHub PR tab icon (favicon) to author's avatar
 // @author       Andrei Rybak
 // @homepageURL  https://github.com/rybak/github-pr-avatars-tab-icons
@@ -102,7 +102,7 @@
 				error("Cannot find the avatar URL", json);
 				return;
 			}
-			const faviconNodes = document.querySelectorAll('link[rel="icon"]');
+			const faviconNodes = document.querySelectorAll('link[rel="icon"], link[rel="alternate icon"]');
 			if (!faviconNodes || faviconNodes.length == 0) {
 				error("Cannot find favicon elements.");
 				return;

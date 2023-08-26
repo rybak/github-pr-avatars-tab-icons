@@ -2,7 +2,7 @@
 
 [![Demonstration of the userscript on two pull requests with different authors](.github/readme/github-pr-author-as-tab-icon.png)](https://github.com/rybak/github-pr-avatars-tab-icons/raw/main/github-pull-request-avatars.user.js)
 
-This userscript GitHub tab icons (favicon) of pull request pages to author's
+This userscript changes GitHub tab icons (favicon) of pull request pages to author's
 avatar.  Note that the userscript sometimes overrides the dynamic display of
 build status in the tab icon.
 

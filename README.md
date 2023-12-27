@@ -15,11 +15,8 @@ The source code is distributed under the terms of the MIT Licence.  See
 ## How to install
 
 1. To install this userscript in your browser you'll need a browser extension
-   for managing userscripts:
-
-   - I recommend [https://www.tampermonkey.net/](https://www.tampermonkey.net/).
-   - More options are listed on <https://greasyfork.org/> (section "Step 1:
-     install a userscript manager")
+   for managing userscripts. See big list on <https://greasyfork.org/>
+   (section "Step 1: install a userscript manager").
 
 2. Once you have a browser extension for userscripts installed, click on
    button "Install this script" on [Greasy Fork][greasyfork].
